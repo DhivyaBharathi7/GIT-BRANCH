@@ -1,56 +1,18 @@
-Main or Master Branch
-Purpose:
+Main/Master Branch:
 
-It serves as the primary branch where the fully functional and stable code resides.
-This branch reflects the production-ready state of the application.
-Usage:
+The main or master branch is the primary branch where the stable and production-ready code resides. This is typically the branch used for deployment and reflects the current state of the application available to end-users.
+Example Use: Develop core application features that have been thoroughly tested.
+Feature Branch:
 
-The final version of the application is deployed from this branch.
-Any changes merged into this branch should be thoroughly tested and reviewed.
-Note:
+A feature branch is created to develop a specific new feature or functionality for the application. It allows developers to work independently without affecting the main codebase.
+Once the feature is complete and tested, it is merged back into the develop or main branch.
+Example Use: Adding a login system, creating a dashboard UI, etc.
+Release Branch:
 
-By default, GitHub now uses the main branch for new repositories instead of master. The names can be customized.
-Feature Branch
-Purpose:
+The release branch is used to prepare the application for a new version release. This includes final testing, bug fixes, and preparing the version for deployment.
+After testing, the branch is merged into both the main and develop branches.
+Example Use: Deliver version 1.0 to the user.
+Hotfix Branch:
 
-Used to develop new features or functionality for the application.
-Isolated from the main branch to ensure independent development.
-Naming Convention:
-
-Typically named descriptively, e.g., feature/add-login, feature/update-dashboard.
-Workflow:
-
-Branch off from the main or develop branch.
-Once the feature is complete, merge it back into develop or main (after testing and review).
-Release Branch
-Purpose:
-
-Prepares the application for delivery to users.
-Focuses on final testing, bug fixes, and version updates before production deployment.
-Workflow:
-
-Branch off from develop (or the feature branch, depending on the workflow).
-Once testing is complete and the application is stable, merge into main and tag the release.
-Merge back into develop if additional changes were made.
-Naming Convention:
-
-Named to reflect the release, e.g., release/v1.0.
-Hotfix Branch
-Purpose:
-
-Used to quickly address critical issues (e.g., bugs) in the production version of the application.
-Ensures that the production application is fixed without affecting ongoing development.
-Workflow:
-
-Branch off from main.
-Apply the fix and test thoroughly.
-Merge back into main (to update production) and develop (to keep development synchronized).
-Naming Convention:
-
-Named descriptively, e.g., hotfix/urgent-bug.
-Summary Table
-Branch	Purpose	Branch From	Merge Back To
-Main/Master	Stable production-ready code.	-	-
-Feature	Developing new features or functionality.	main/develop	develop
-Release	Prepares code for release (testing and fixes).	develop	main/develop
-Hotfix	Quickly fix critical issues in production.	main	main/develop
+A hotfix branch is created to fix critical bugs in the production application immediately. These changes are usually merged directly into the main branch and back into the develop branch to keep all codebases consistent.
+Example Use: Fixing a security vulnerability or a breaking bug in production.
